@@ -16,7 +16,7 @@ from erpnext.setup.doctype.incoterm.incoterm import create_incoterms
 from .default_success_action import get_default_success_action
 
 default_mail_footer = """<div style="padding: 7px; text-align: right; color: #888"><small>Sent via
-	<a style="color: #888" href="http://erpnext.org">ERPNext</a></div>"""
+	<a style="color: #888" href="http://devsbranch.org">DevsBranch ERP Platform</a></div>"""
 
 
 def after_install():
@@ -39,7 +39,7 @@ def after_install():
 
 def check_setup_wizard_not_completed():
 	if cint(frappe.db.get_single_value("System Settings", "setup_complete") or 0):
-		message = """ERPNext can only be installed on a fresh site where the setup wizard is not completed.
+		message = """ERP can only be installed on a fresh site where the setup wizard is not completed.
 You can reinstall this site (after saving your data) using: bench --site [sitename] reinstall"""
 		frappe.throw(message)  # nosemgrep
 
@@ -55,7 +55,7 @@ def check_frappe_version():
 		return
 
 	click.secho(
-		f"You're attempting to install ERPNext version {erpnext_version} with Frappe version {frappe_version}. "
+		f"You're attempting to install ERP version {erpnext_version} with Frappe version {frappe_version}. "
 		"This is not supported and will result in broken install. Switch to correct branch before installing.",
 		fg="red",
 	)
@@ -170,25 +170,25 @@ def add_standard_navbar_items():
 		{
 			"item_label": "Documentation",
 			"item_type": "Route",
-			"route": "https://docs.erpnext.com/",
+			"route": "#",
 			"is_standard": 1,
 		},
 		{
-			"item_label": "User Forum",
+			"item_label": "User Discussions",
 			"item_type": "Route",
-			"route": "https://discuss.frappe.io",
+			"route": "#",
 			"is_standard": 1,
 		},
 		{
 			"item_label": "Frappe School",
 			"item_type": "Route",
-			"route": "https://frappe.school?utm_source=in_app",
+			"route": "#",
 			"is_standard": 1,
 		},
 		{
-			"item_label": "Report an Issue",
+			"item_label": "Helpdesk Support",
 			"item_type": "Route",
-			"route": "https://github.com/frappe/erpnext/issues",
+			"route": "#",
 			"is_standard": 1,
 		},
 	]
@@ -218,7 +218,7 @@ def add_standard_navbar_items():
 
 
 def add_app_name():
-	frappe.db.set_single_value("System Settings", "app_name", "ERPNext")
+	frappe.db.set_single_value("System Settings", "app_name", "ERP")
 
 
 def setup_log_settings():
