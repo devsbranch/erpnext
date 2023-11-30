@@ -9,8 +9,8 @@ WEBSITE_REPOS = [
 ]
 
 DOCUMENTATION_DOMAINS = [
-	"#",
-	"#",
+	"https://devsbranch.com",
+	"https://devsbranch.com",
 ]
 
 

@@ -170,25 +170,25 @@ def add_standard_navbar_items():
 		{
 			"item_label": "Documentation",
 			"item_type": "Route",
-			"route": "#",
+			"route": "https://devsbranch.com",
 			"is_standard": 1,
 		},
 		{
 			"item_label": "User Discussions",
 			"item_type": "Route",
-			"route": "#",
+			"route": "https://devsbranch.com",
 			"is_standard": 1,
 		},
 		{
-			"item_label": "Frappe School",
+			"item_label": "Our Customers",
 			"item_type": "Route",
-			"route": "#",
+			"route": "https://devsbranch.com",
 			"is_standard": 1,
 		},
 		{
 			"item_label": "Helpdesk Support",
 			"item_type": "Route",
-			"route": "#",
+			"route": "https://devsbranch.com",
 			"is_standard": 1,
 		},
 	]
